@@ -1,0 +1,159 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  /* vertical-align: top; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: 'Playfair Display';
+font-weight: normal;
+letter-spacing: 1px; */
+  font-weight: inherit;
+  font-size: inherit;
+}
+/*# sourceMappingURL=index.css.map */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 15px;
+    background: #eee;
+    overflow: hidden;
+}
+
+/* ============================================== */
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 100px auto;
+    max-width: 800px;
+}
+
+.title {
+    padding-bottom: 30px;
+    text-align: center;
+    color: darkcyan;
+    font-size: 32px;
+}
+
+.textarea {
+    border:1px solid aqua;
+    border-radius: 10px;
+    height: 180px;
+    width: 700px; 
+    padding: 10px;
+}
+
+.keyboard {
+    margin-top: 10px;
+    border:1px solid aqua;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    padding: 6px 6px 0 0;
+    background-color: #eee;
+}
+
+.keyboard__row {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.keyboard__key{
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: darkcyan;
+    border:1px solid aqua;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.keyboard__key:hover{
+    border-radius: 7px;
+    background-color:darkcyan;
+    color: white;
+}
+.color-btn{
+    background-color:aquamarine;
+}
+.backspace{
+    width: 100px;
+
+}
+.tab{
+    width: 55px;
+
+}
+.del{
+    width: 40px;
+
+}
+
+.capslock, .left-shift{
+    width: 85px;
+
+}
+.enter, .right-shift{
+    width: 102px;
+
+}
+.space {
+    width: 315px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.hover{
+    border-radius: 4px;
+    background-color:darkcyan;
+    color: white;
+}
+
+
