@@ -17,6 +17,8 @@ document.addEventListener('click',(e)=>{
     if(e.target == rightShift || e.target == leftShift){
         shiftKeys();
     }  
+
+    console.log(e.target);
     
 });
 
@@ -46,8 +48,13 @@ function capsLock(){
 
 
 document.addEventListener("keydown", function(e) {
+    // e.preventDefault();
     if(e.key == 'Backspace'){
         textarea.innerHTML = textarea.innerHTML.substring(0,textarea.innerHTML.length-1);
+    }
+    if(e.key == 'Tab'){
+        e.preventDefault();
+        textarea.innerHTML += "\t";
     }
   
   
@@ -94,7 +101,15 @@ document.addEventListener("keyup", function(e) {
   });
 
 document.addEventListener("keypress", function(e) {
-    textarea.innerHTML += e.key;
+    console.log(e.key);
+    if (e.key == 'Enter'){
+        textarea.innerHTML += "\n";
+
+    }
+    else {
+        textarea.innerHTML += e.key;
+    }
+    
   });
 
 

@@ -6,13 +6,13 @@ export default function keyboardBody(){
         <textarea class="textarea" rows="6" cols="70"></textarea>
         <div class="keyboard">
             <div class="keyboard__row">
-                <div class="keyboard__key ">
-                    <div data-code="Backquote" class="symbol eng">
+                <div data-code="Backquote" class="keyboard__key ">
+                    <div  class="symbol eng">
                         <span>\`</span><span class="hidden">~</span>
                     </div>
                 </div>
-                <div class="keyboard__key ">
-                    <div data-code="Digit1" class="symbol eng">
+                <div data-code="Digit1" class="keyboard__key ">
+                    <div  class="symbol eng">
                         <span>1</span><span class="hidden">!</span>
                     </div>
                 </div>
