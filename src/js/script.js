@@ -21,7 +21,7 @@ const keys = document.querySelectorAll("[data-code]");
 
 
 keys.forEach(key=>{
-    key.addEventListener('click',(e)=>{
+    key.addEventListener('mousedown',(e)=>{
         // console.log(e.target.dataset.code)
         if(e.target.dataset.code == 'Backspace'){
           textarea.innerHTML = textarea.innerHTML.substring(0,textarea.innerHTML.length-1);
@@ -38,6 +38,9 @@ keys.forEach(key=>{
         }
         else if (e.target.dataset.code == 'Enter'){
           textarea.innerHTML += "\n";
+        }
+        else if (e.target.dataset.code == 'ShiftRight' || e.target.dataset.code == 'ShiftLeft'){
+            shiftKeys();
         }
         else if (e.target.dataset.code == 'Delete'){
           textarea.innerHTML = textarea.innerHTML.substring(1,textarea.innerHTML.length);
@@ -63,6 +66,11 @@ keys.forEach(key=>{
         }
       
       });
+    key.addEventListener('mouseup',(e)=>{
+        if (e.target.dataset.code == 'ShiftRight' || e.target.dataset.code == 'ShiftLeft'){
+            shiftKeys();
+        }
+    }) ;
 });
 
 

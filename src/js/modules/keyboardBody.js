@@ -188,49 +188,40 @@ export default function keyboardBody(){
                 <div data-code="CapsLock" class="keyboard__key capslock color-btn">CapsLock</div>
 
                 <div data-code="KeyA"  class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>a</span>
-                    </div>
+                    <div class="letter eng">a</div>
+                    <div class="letter ru hidden">ф</div>
                 </div>
                 <div data-code="KeyS" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>s</span>
-                    </div>
+                    <div class="letter eng">s</div>
+                    <div class="letter ru hidden">ы</div>
                 </div>
                 <div data-code="KeyD" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>d</span>
-                    </div>
+                    <div class="letter eng">d</div>
+                    <div class="letter ru hidden">в</div>
                 </div>
                 <div data-code="KeyF" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>f</span>
-                    </div>
+                    <div class="letter eng">f</div>
+                    <div class="letter ru hidden">а</div>
                 </div>
                 <div data-code="KeyG" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>g</span>
-                    </div>
+                    <div class="letter eng">g</div>
+                    <div class="letter ru hidden">п</div>
                 </div>
                 <div data-code="KeyH" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>h</span>
-                    </div>
+                    <div class="letter eng">h</div>
+                    <div class="letter ru hidden">р</div>
                 </div>
                 <div data-code="KeyJ" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>j</span>
-                    </div>
+                    <div class="letter eng">j</div>
+                    <div class="letter ru hidden">о</div>
                 </div>
                 <div data-code="KeyK" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>k</span>
-                    </div>
+                    <div class="letter eng">k</div>
+                    <div class="letter ru hidden">л</div>
                 </div>
                 <div data-code="KeyL" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>l</span>
-                    </div>
+                    <div class="letter eng">l</div>
+                    <div class="letter ru hidden">д</div>
                 </div>
 
                 <div data-code="Semicolon" class="keyboard__key ">
@@ -238,12 +229,14 @@ export default function keyboardBody(){
                         <span>;</span>
                         <span class="hidden">:</span>
                     </div>
+                    <div class="letter ru hidden">ж</div>
                 </div>
                 <div data-code="Quote" class="keyboard__key ">
                     <div class="symbol eng">
                         <span>'</span>
                         <span class="hidden">"</span>
                     </div>
+                    <div class="letter ru hidden">э</div>
                 </div>
                 <div data-code="Enter" class="keyboard__key enter color-btn">Enter</div>
                 
@@ -254,57 +247,56 @@ export default function keyboardBody(){
                 <div data-code="ShiftLeft" class="keyboard__key left-shift color-btn">Shift</div>
 
                 <div data-code="KeyZ" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>z</span>
-                    </div>
+                    <div class="letter eng">z</div>
+                    <div class="letter ru hidden">я</div>
                 </div>
                 <div  data-code="KeyX" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>x</span>
-                    </div>
+                    <div class="letter eng">x</div>
+                    <div class="letter ru hidden">ч</div>
                 </div>
                 <div data-code="KeyC" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>c</span>
-                    </div>
+                    <div class="letter eng">с</div>
+                    <div class="letter ru hidden">c</div>
                 </div>
                 <div data-code="KeyV" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>v</span>
-                    </div>
+                    <div class="letter eng">v</div>
+                    <div class="letter ru hidden">м</div>
                 </div>
                 <div data-code="KeyB" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>b</span>
-                    </div>
+                    <div class="letter eng">b</div>
+                    <div class="letter ru hidden">и</div>
                 </div>
                 <div data-code="KeyN" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>n</span>
-                    </div>
+                    <div class="letter eng">n</div>
+                    <div class="letter ru hidden">т</div>
                 </div>
                 <div data-code="KeyM" class="keyboard__key ">
-                    <div class="letter eng">
-                        <span>m</span>
-                    </div>
+                    <div class="letter eng">m</div>
+                    <div class="letter ru hidden">ь</div>
                 </div>
                 <div data-code="Comma" class="keyboard__key ">
                     <div class="symbol eng">
                         <span>,</span>
                         <span class="hidden">&lt;</span>
                     </div>
+                    <div class="letter ru hidden">б</div>
                 </div>
                 <div data-code="Period" class="keyboard__key ">
                     <div class="symbol eng">
                         <span>.</span>
                         <span class="hidden">&gt;</span>
                     </div>
+                    <div class="letter ru hidden">ю</div>
                 </div>
                 <div data-code="Slash" class="keyboard__key ">
                     <div class="symbol eng">
                         <span>/</span>
                         <span class="hidden">?</span>
                     </div>
+                    <div class="symbol ru hidden">
+                    <span>.</span>
+                    <span class="hidden">,</span>
+                </div>
                 </div>
                 <div data-code="ArrowUp" class="keyboard__key arrow-top color-btn">&uarr;</div>
                 <div data-code="ShiftRight" class="keyboard__key right-shift color-btn">Shift</div>
