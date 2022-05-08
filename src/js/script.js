@@ -2,14 +2,23 @@ import keyboardBody from './modules/keyboardBody';
 
 keyboardBody();
 
+
 // const keyboard = document.querySelector('.keyboard');
 const textarea = document.querySelector('.textarea');
 const symbols = document.querySelectorAll('.symbol span');
 const letters = document.querySelectorAll('.letter');
 // let shift = false;
 let caps = false;
+let lang = false;
 
 const keys = document.querySelectorAll("[data-code]");
+
+//выбираем язык при перезагрузке
+
+ if(localStorage.getItem('lang') == 'true'){
+        changeLang();
+ }
+
 
 keys.forEach(key=>{
     key.addEventListener('click',(e)=>{
@@ -91,6 +100,12 @@ function changeLang(){
     engKey.forEach(key=>{
         key.classList.toggle('hidden');
     });
+
+    lang = !lang;
+
+    localStorage.setItem('lang', lang);
+
+   
     
 }
 
