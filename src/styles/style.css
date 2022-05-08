@@ -50,6 +50,7 @@ body {
     font-size: 15px;
     background: #eee;
     overflow: hidden;
+    transition: all 0.4s;
 }
 
 /* ============================================== */
@@ -109,6 +110,7 @@ body {
     font-size: 18px;
 }
 .keyboard__key:hover{
+    transition: all 0.4s;
     border-radius: 7px;
     background-color:darkcyan;
     color: white;
@@ -141,6 +143,15 @@ body {
     width: 315px;
 }
 
+.lang{
+    margin-top: 15px;
+    text-align: center;
+    color:darkcyan;
+    border: 1px solid aqua;
+    border-radius:4px;
+    font-size: 18px;
+    width: 35%;
+}
 
 
 .hidden {
@@ -151,6 +162,7 @@ body {
 }
 
 .hover{
+    
     border-radius: 4px;
     background-color:darkcyan;
     color: white;

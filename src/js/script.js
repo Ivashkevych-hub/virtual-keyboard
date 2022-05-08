@@ -2,24 +2,42 @@ import keyboardBody from './modules/keyboardBody';
 
 keyboardBody();
 
-
+const keyboard = document.querySelector('.keyboard');
 const textarea = document.querySelector('.textarea');
 const symbols = document.querySelectorAll('.symbol span');
-const letters = document.querySelectorAll('.letter span');
+const letters = document.querySelectorAll('.letter');
 // let shift = false;
-// let caps = false;
+let caps = false;
 const leftShift = document.querySelector('.left-shift');
 const rightShift = document.querySelector('.right-shift');
 const backspace = document.querySelector('.backspace');
 const keys = document.querySelectorAll("[data-code]");
 
-document.addEventListener('click',(e)=>{
-    if(e.target == rightShift || e.target == leftShift){
-        shiftKeys();
-    }  
+keyboard.addEventListener('click',(e)=>{
 
-    console.log(e.target);
-    
+  if(e.target.dataset.code == 'Backspace'){
+    textarea.innerHTML = textarea.innerHTML.substring(0,textarea.innerHTML.length-1);
+  }
+  else if(e.target.dataset.code == 'Tab'){
+    textarea.innerHTML += '    ';
+  }
+  else if(e.target.dataset.code == 'Space'){
+    textarea.innerHTML += ' ';
+  }
+  else if(e.target.dataset.code == 'CapsLock'){
+    e.target.classList.toggle('hover') ; 
+    capsLock();
+  }
+  else if (e.target.dataset.code == 'Enter'){
+    textarea.innerHTML += "\n";
+  }
+  else if (e.target.dataset.code == 'Delete'){
+    textarea.innerHTML = textarea.innerHTML.substring(1,textarea.innerHTML.length);
+
+  }else {
+    textarea.innerHTML += e.target.innerText; 
+  }
+
 });
 
 
@@ -28,13 +46,12 @@ function shiftKeys(){
     symbols.forEach(symbol=>{
         symbol.classList.toggle('hidden');
      });
-     letters.forEach(letter=>{
-         letter.classList.toggle('uppercase');
-     });
+     if(caps == false){
+        letters.forEach(letter=>{
+            letter.classList.toggle('uppercase');
+        });
+     }
 
-    //  shift = (shift === true) ? false : true;
-    //  capsLock = false;
-    //  return false;
 }
 
 function capsLock(){
@@ -42,8 +59,21 @@ function capsLock(){
     letters.forEach(letter=>{
         letter.classList.toggle('uppercase');
     });
+    caps = !caps;
 
-   
+}
+
+function changeLang(){
+    let ruKey = document.querySelectorAll('.ru');
+    let engKey = document.querySelectorAll('.eng');
+
+    ruKey.forEach(key=>{
+        key.classList.toggle('hidden');
+    });
+    engKey.forEach(key=>{
+        key.classList.toggle('hidden');
+    });
+    
 }
 
 
@@ -54,9 +84,13 @@ document.addEventListener("keydown", function(e) {
     }
     if(e.key == 'Tab'){
         e.preventDefault();
-        textarea.innerHTML += "\t";
+        textarea.innerHTML += "    ";
     }
-  
+
+    if (e.shiftKey && e.ctrlKey) {
+        changeLang();
+      }
+    
   
     //hover
     keys.forEach(key =>{
@@ -75,9 +109,6 @@ document.addEventListener("keydown", function(e) {
   
     }
 
-    // console.log(e.code);
-    // console.log(e.key);
-
     
   });
 
@@ -89,7 +120,7 @@ document.addEventListener("keyup", function(e) {
         }
     });
 
-    if(e.key == 'Shift'){
+    if(e.key == 'Shift'){  
         shiftKeys();
     }
 
@@ -101,13 +132,17 @@ document.addEventListener("keyup", function(e) {
   });
 
 document.addEventListener("keypress", function(e) {
-    console.log(e.key);
-    if (e.key == 'Enter'){
-        textarea.innerHTML += "\n";
+    let key = document.querySelector(`[data-code=${e.code}]`).innerText;
 
+    if (e.code == 'Enter'){
+        textarea.innerHTML += "\n";
+    }
+    else if(e.code == 'Space'){
+        // e.preventDefault();
+        textarea.innerHTML += " ";
     }
     else {
-        textarea.innerHTML += e.key;
+        textarea.innerHTML += key;
     }
     
   });
